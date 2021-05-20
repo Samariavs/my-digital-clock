@@ -3,7 +3,7 @@
 const hourToShow = document.getElementById('hour');
 const minuteToShow = document.getElementById('minute');
 const secondsToShow = document.getElementById('second');
-const amPmToShow = document.getElementById('ampm');
+const meridianIndicatorToShow = document.getElementById('meridianIndicator');
 
 (function(){
 
@@ -12,20 +12,20 @@ const amPmToShow = document.getElementById('ampm');
         let clock = new Date();
         let hours = clock.getHours();
         let minutes = clock.getMinutes();
-        let ampm;
+        let period;
         let seconds = clock.getSeconds();
 
         if(hours >= 12){
             hours = hours - 12;
-            ampm = 'PM';
+            period = 'PM';
         }else{
-            ampm = 'AM';
+            period = 'AM';
         }
 
         hourToShow.textContent = hours;
         minuteToShow.textContent = minutes;
         secondsToShow.textContent = seconds;
-        amPmToShow.textContent = ampm;
+        meridianIndicatorToShow.textContent = period;
     };
 
   showClock();
