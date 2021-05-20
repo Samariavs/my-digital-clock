@@ -1,3 +1,10 @@
+'use strict';
+
+const hourToShow = document.getElementById('hour');
+const minuteToShow = document.getElementById('minute');
+const secondsToShow = document.getElementById('second');
+const amPmToShow = document.getElementById('ampm');
+
 (function(){
 
     const showClock = () => {
@@ -7,11 +14,6 @@
         let minutes = clock.getMinutes();
         let ampm;
         let seconds = clock.getSeconds();
-
-        let hourToShow = document.getElementById('hour');
-        let minuteToShow = document.getElementById('minute');
-        let secondsToShow = document.getElementById('second');
-        let amPmToShow = document.getElementById('ampm');
 
         if(hours >= 12){
             hours = hours - 12;
