@@ -22,6 +22,13 @@ const meridianIndicatorToShow = document.getElementById('meridianIndicator');
             period = 'AM';
         }
 
+        if(minutes < 10){
+            minutes = '0'+minutes;
+        }
+
+        if(seconds < 10){
+            seconds = '0'+seconds;
+        }
         hourToShow.textContent = hours;
         minuteToShow.textContent = minutes;
         secondsToShow.textContent = seconds;
@@ -30,4 +37,5 @@ const meridianIndicatorToShow = document.getElementById('meridianIndicator');
 
   showClock();
   var intervalId = setInterval(showClock,1000);
+  
 }())
