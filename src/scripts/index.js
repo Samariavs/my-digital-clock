@@ -1,7 +1,7 @@
 (function(){
 
     const showClock = function() {
-        //declaracion de variables a usar
+
         let clock = new Date();
         let hours = clock.getHours();
         let minutes = clock.getMinutes();
