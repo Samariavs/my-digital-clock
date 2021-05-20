@@ -1,17 +1,17 @@
 (function(){
 
-    var showClock = function() {
+    const showClock = function() {
         //declaracion de variables a usar
-        var clock = new Date(),
-        hours = clock.getHours(),
-        minutes = clock.getMinutes(),
-        ampm,
-        seconds = clock.getSeconds();
+        const clock = new Date();
+        const hours = clock.getHours();
+        const minutes = clock.getMinutes();
+        const ampm;
+        const seconds = clock.getSeconds();
 
-        var sHours = document.getElementById('hour'),
-            sMinutes = document.getElementById('minute'),
-            sSeconds = document.getElementById('second');
-            sAmPm = document.getElementById('ampm');
+        const sHours = document.getElementById('hour');
+        const sMinutes = document.getElementById('minute');
+        const sSeconds = document.getElementById('second');
+        const sAmPm = document.getElementById('ampm');
 
         if(hours >= 12){
             hours = hours - 12;
