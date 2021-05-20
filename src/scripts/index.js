@@ -2,16 +2,16 @@
 
     const showClock = function() {
         //declaracion de variables a usar
-        const clock = new Date();
-        const hours = clock.getHours();
-        const minutes = clock.getMinutes();
-        const ampm;
-        const seconds = clock.getSeconds();
+        let clock = new Date();
+        let hours = clock.getHours();
+        let minutes = clock.getMinutes();
+        let ampm;
+        let seconds = clock.getSeconds();
 
-        const sHours = document.getElementById('hour');
-        const sMinutes = document.getElementById('minute');
-        const sSeconds = document.getElementById('second');
-        const sAmPm = document.getElementById('ampm');
+        let hourToShow = document.getElementById('hour');
+        let minuteToShow = document.getElementById('minute');
+        let secondsToShow = document.getElementById('second');
+        let amPmToShow = document.getElementById('ampm');
 
         if(hours >= 12){
             hours = hours - 12;
@@ -20,10 +20,10 @@
             ampm = 'AM';
         }
 
-        sHours.innerHTML = hours;
-        sMinutes.textContent = minutes;
-        sSeconds.textContent = seconds;
-        sAmPm.textContent = ampm;
+        hourToShow.textContent = hours;
+        minuteToShow.textContent = minutes;
+        secondsToShow.textContent = seconds;
+        amPmToShow.textContent = ampm;
     };
 
   showClock();
