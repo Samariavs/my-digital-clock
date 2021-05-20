@@ -1,6 +1,6 @@
 (function(){
 
-    const showClock = function() {
+    const showClock = () => {
 
         let clock = new Date();
         let hours = clock.getHours();
@@ -27,5 +27,5 @@
     };
 
   showClock();
-  var interval = setInterval(showClock,1000);
+  var intervalId = setInterval(showClock,1000);
 }())
