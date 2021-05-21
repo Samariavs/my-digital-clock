@@ -1,5 +1,3 @@
-'use strict';
-
 const hourToShow = document.getElementById('hour');
 const minuteToShow = document.getElementById('minute');
 const secondsToShow = document.getElementById('second');
@@ -15,7 +13,7 @@ const meridianIndicatorToShow = document.getElementById('meridianIndicator');
         let period;
         let seconds = clock.getSeconds();
 
-        if(hours >= 12){
+        if(hours > 12){
             hours = hours - 12;
             period = 'PM';
         }else{
@@ -23,11 +21,11 @@ const meridianIndicatorToShow = document.getElementById('meridianIndicator');
         }
 
         if(minutes < 10){
-            minutes = '0'+minutes;
+            minutes = '{0}$minutes';
         }
 
         if(seconds < 10){
-            seconds = '0'+seconds;
+            seconds = '{0}$seconds';
         }
         hourToShow.textContent = hours;
         minuteToShow.textContent = minutes;
@@ -36,6 +34,6 @@ const meridianIndicatorToShow = document.getElementById('meridianIndicator');
     };
 
   showClock();
-  var intervalId = setInterval(showClock,1000);
+  const intervalId = setInterval(showClock,1000);
   
 }())
