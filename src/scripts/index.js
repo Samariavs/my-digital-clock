@@ -7,25 +7,21 @@ const meridianIndicatorToShow = document.getElementById('meridianIndicator');
 
     const showClock = () => {
 
-        let clock = new Date();
+        const clock = new Date();
         let hours = clock.getHours();
         let minutes = clock.getMinutes();
         let period;
         let seconds = clock.getSeconds();
 
-        if(hours > 12){
-            hours = hours - 12;
-            period = 'PM';
-        }else{
-            period = 'AM';
-        }
+        period = (hours > 12)? 'PM' : 'AM';
+        hours = (hours > 12)? hours - 12 : hours;
 
         if(minutes < 10){
-            minutes = '{0}$minutes';
+           '0 ${minutes';
         }
 
         if(seconds < 10){
-            seconds = '{0}$seconds';
+           '0 ${seconds}'
         }
         hourToShow.textContent = hours;
         minuteToShow.textContent = minutes;
