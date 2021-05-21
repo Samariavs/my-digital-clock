@@ -3,7 +3,7 @@ const minuteToShow = document.getElementById('minute');
 const secondsToShow = document.getElementById('second');
 const meridianIndicatorToShow = document.getElementById('meridianIndicator');
 
-(function(){
+const clock = () =>{
 
     const showClock = () => {
 
@@ -32,4 +32,5 @@ const meridianIndicatorToShow = document.getElementById('meridianIndicator');
   showClock();
   const intervalId = setInterval(showClock,1000);
   
-}())
+}
+clock();
