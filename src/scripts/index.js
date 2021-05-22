@@ -1,18 +1,16 @@
-const hoursElement= document.getElementById('hour');
-const minutesElement = document.getElementById('minute');
-const secondsElement = document.getElementById('second');
+const hoursElement= document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
 const meridianIndicatorElement = document.getElementById('meridianIndicator');
-
-const clock = () =>{
+const SECONDS = 1000;
 
     const showClock = () => {
 
         const clock = new Date();
-        let hours = clock.getHours();
-        let minutes = clock.getMinutes();
-        let seconds = clock.getSeconds();
+        const hours = clock.getHours();
+        const minutes = clock.getMinutes();
+        const seconds = clock.getSeconds();
 
-       
         hoursElement.textContent = (hours > 12)? hours - 12 : hours;
         minutesElement.textContent = (minutes < 10)? `0${minutes}`: minutes;
         secondsElement.textContent = (seconds <10)? `0${seconds}`: seconds;
@@ -20,7 +18,4 @@ const clock = () =>{
     };
 
   showClock();
-  const intervalId = setInterval(showClock,1000);
-  
-}
-clock();
+  const intervalId = setInterval(showClock,SECONDS);
