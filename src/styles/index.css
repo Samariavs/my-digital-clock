@@ -12,12 +12,16 @@ body{
     color: rgb(0, 250, 54);
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .container{
     margin: auto;
     max-width: 1000px;
     width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .clock{
@@ -26,7 +30,7 @@ body{
     font-size: 3em;
     padding: 20px;
     width: 80%;
-    height: 40vh;
+    min-height: 40vh;
     background: rgba(0, 0, 0, .5);
     border: solid 2px  rgb(0, 250, 54);
 }
@@ -35,6 +39,7 @@ p{
     display: inline-block;
     line-height: 1em;
     margin: 10px 5px;
+
 }
 
 .clock__seconds-box{
@@ -46,4 +51,16 @@ p{
 .clock__meridianIndicator,
 .clock__seconds{
     display: block;
+}
+
+@media screen and (max-width: 610px){
+    .clock{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .clock{
+        font-size: 1em;
+    }
 }
