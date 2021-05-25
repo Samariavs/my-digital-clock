@@ -1,5 +1,5 @@
 *{
-    margin: 50px;
+    margin: 0px;
     padding: 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -13,6 +13,7 @@ body{
 }
 
 .title{
+    margin: 20px 15px;
     font-weight: 300;
     line-height: 0;
     color: rgb(91, 91, 91) ;
@@ -28,7 +29,6 @@ body{
 .title__subtitle{
     font-size: 1.5em;
     margin-bottom: 40px;
-    margin-left: 125px;
 }
 
 .img{
@@ -72,14 +72,78 @@ p{
     display: block;
 }
 
-@media screen and (max-width: 610px){
-    .clock{
-        font-size: 1.5em;
+@media screen and (max-width: 1210px){
+    
+    .title__title{
+        font-size: 2em;
+        line-height: 50px;
     }
+    
+    .title__subtitle{
+        font-size: 1em;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .img{
+        margin: auto;
+        width: 540px;
+        height: 375px;
+    }
+    
+    .container{
+        margin-left: 300px;
+        width: 650px;
+        height: 300px;
+    }
+    
+    .clock{
+        text-align: center;
+        font-weight: 400;
+        padding: 145px 0;
+        margin-left: -200px;
+    }
+    
+    p{
+        font-size: 1.8em;
+    }
+    
 }
 
-@media screen and (max-width: 480px){
-    .clock{
+@media screen and (max-width: 730px){
+    .title__title{
         font-size: 1em;
+        line-height: 20px;
+    }
+    
+    .title__subtitle{
+        font-size: .8em;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .img{
+        margin: auto;
+        width: 250px;
+        height: 165px;
+    }
+    
+    .container{
+        margin-left: 80px;
+        width: 325px;
+        height: 150px;
+    }
+    
+    .clock{
+        text-align: center;
+        font-weight: 400;
+        padding: 65px 0;
+        margin-left: -115px;
+    }
+    
+    p{
+        font-size: .5em;
+        margin: 2px;
+        line-height: 5px;
     }
 }
