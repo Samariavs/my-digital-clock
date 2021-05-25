@@ -32,7 +32,7 @@ body{
     width: 80%;
     min-height: 40vh;
     background: rgba(0, 0, 0, .5);
-    border: solid 2px  rgb(0, 250, 54);
+    
 }
 
 p{
@@ -64,10 +64,18 @@ p{
     .clock{
         font-size: 1.5em;
     }
+
+    .date{
+        font-size: .6em;
+    }
 }
 
 @media screen and (max-width: 480px){
     .clock{
         font-size: 1em;
+    }
+
+    .date{
+        font-size: .5em;
     }
 }

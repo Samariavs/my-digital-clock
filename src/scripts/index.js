@@ -6,6 +6,7 @@ const dayElement = document.getElementById('day');
 const monthElement = document.getElementById('month');
 const yearElement = document.getElementById('year');
 const SECONDS = 1000;
+const monthArray = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
     const showClock = () => {
 
@@ -21,8 +22,6 @@ const SECONDS = 1000;
         minutesElement.textContent = (minutes < 10)? `0${minutes}`: minutes;
         secondsElement.textContent = (seconds <10)? `0${seconds}`: seconds;
         meridianIndicatorElement.textContent = (hours > 12)? 'PM': 'AM';
-        
-        const monthArray = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
         dayElement.textContent = day;
         monthElement.textContent = monthArray[month];
         yearElement.textContent = year;
