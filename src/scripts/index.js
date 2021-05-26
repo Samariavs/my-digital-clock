@@ -4,6 +4,7 @@ const secondsElement = document.getElementById('seconds');
 const meridianIndicatorElement = document.getElementById('meridianIndicator');
 const SECONDS = 1000;
 
+
     const showClock = () => {
 
         const clock = new Date();
