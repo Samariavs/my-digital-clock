@@ -100,12 +100,13 @@ p{
     .clock{
         text-align: center;
         font-weight: 400;
-        padding: 145px 0;
+        padding: 160px 0;
         margin-left: -200px;
     }
     
     p{
         font-size: 1.8em;
+        margin: 0 2px;
     }
     
 }
@@ -137,13 +138,13 @@ p{
     .clock{
         text-align: center;
         font-weight: 400;
-        padding: 65px 0;
+        padding: 69px 0;
         margin-left: -115px;
     }
     
     p{
         font-size: .5em;
-        margin: 2px;
+        margin: 0 1px;
         line-height: 5px;
     }
 }
